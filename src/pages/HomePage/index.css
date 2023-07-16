@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito:wght@600&family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito:wght@600&family=Poppins:wght@600&display=swap");
+.page {
+  background-color: #ffff;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 22px;
+  font-family: "Nunito";
+  font-weight: 800;
+}
+
+.title > img{
+  width:70%;
+}
+
+
+.information > p {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-size: 32px;
+  margin-top: 20px;
+  color: #000000;
+}
+
+
+.information > button {
+  width: 93%;
+  height: 48px;
+  background-color: #6495ED ;
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid #6495ED;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.image > img {
+  margin-top: 20px;
+  width:100%;
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .title {
+    margin-top: -130px;
+  }
+
+  .image > img {
+    width: 593px;
+    height: 100%;
+    margin-top: -90px;
+  }
+
+  .information > button {
+    width: 241px;
+    cursor: pointer;
+  }
+}
