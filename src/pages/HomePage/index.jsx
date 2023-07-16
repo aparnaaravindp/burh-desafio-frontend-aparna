@@ -13,7 +13,7 @@ export function HomePage({ setStart }) {
               <img src = {burhImage} alt = "burhLogo"/>
             </h1>
             <p>Explore new technologies</p>
-            <button onClick={() => setStart("DashBoardPage")}>Iniciar</button>
+            <button onClick={() => setStart("DashBoardPage")}>Start</button>
           </div>
           <div className="image">
             <img src={technologyImage} alt="technologyImage" />
