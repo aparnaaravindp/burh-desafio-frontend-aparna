@@ -10,6 +10,7 @@ function App() {
       {start === "HomePage" ? (
         <HomePage setStart={setStart} />
       ) : (
+        
         <DashBoardPage setStart={setStart} />
       )}
     </>

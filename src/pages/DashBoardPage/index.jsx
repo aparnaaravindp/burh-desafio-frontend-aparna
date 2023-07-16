@@ -1,12 +1,13 @@
-import burhImage from "../../assets/burhImage.svg";
+import { Header } from "../../components/Header";
 
-export function DashBoardPage({ setStart }) {
+
+export function DashBoardPage({setStart}) {
   return (
-    <section className="userPage">
-      <div className="headerContainer">
-        <img src={burhImage} alt="burhImage" />
-        <button onClick={() => setStart("HomePage")}>Inicio</button>
-      </div>
-    </section>
+    <>
+    
+    <Header setStart = {setStart}/>
+
+    </>
+    
   );
 }
