@@ -2,9 +2,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import "../CreateModal/index.css";
-import { useState } from "react";
-import { toast } from "react-toastify";
-import { api } from "../../services/api";
+import { useContext } from "react";
+import { TechContext } from "../../providers/TechContext";
 
 const schema = yup
   .object({
@@ -12,8 +11,8 @@ const schema = yup
   })
   .required();
 
-export function CreateModal({ setTechCreateModal }) {
-  const [techData, setTechData] = useState([]);
+export function CreateModal() {
+  const { techCreate, setTechCreateModal } = useContext(TechContext);
 
   const {
     register,
@@ -22,18 +21,6 @@ export function CreateModal({ setTechCreateModal }) {
   } = useForm({
     resolver: yupResolver(schema),
   });
-
-  const techCreate = async (data) => {
-    try {
-      const response = await api.post(`/technologies`, data);
-
-      console.log(techData);
-      toast.success("Technology registered successfuly", { autoClose: 2000 });
-    } catch (error) {
-      console.log(error);
-      toast.error("Technology already registered", { autoClose: 2000 });
-    }
-  };
 
   const submit = async (data) => {
     await techCreate(data);

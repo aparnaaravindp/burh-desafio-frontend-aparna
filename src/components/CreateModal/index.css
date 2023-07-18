@@ -127,11 +127,10 @@ select > option {
     transform: translate(-40%, -50%);
   }
 
-  form {
-    .closeButton {
-      cursor: pointer;
-    }
+  form > .closeButton {
+    cursor: pointer;
   }
+
   .techRegButton {
     cursor: pointer;
   }

@@ -26,6 +26,45 @@
   margin-top: 40px;
 }
 
+.techDetails {
+  width: 55%;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.techDetails > ul {
+  padding: 10px;
+}
+ul > .techList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 38px;
+  background-color: #6495ed;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.techName {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14.2123px;
+  color: black;
+}
+
+.techStatus {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12.182px;
+  color: black;
+}
+
 @media (min-width: 900px) {
   .createButton {
     cursor: pointer;
