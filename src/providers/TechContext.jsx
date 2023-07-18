@@ -7,7 +7,6 @@ export const TechContext = createContext({});
 export const TechProvider = ({ children }) => {
   const [techCreateModal, setTechCreateModal] = useState(false);
   const [techData, setTechData] = useState([]);
-  const[techDataById, setTechDataById] = useState({})
   const [techUpdateModal, setTechUpdateModal] = useState(false);
   const [editingStatus, setEditingStatus] = useState(null);
 
@@ -15,7 +14,6 @@ export const TechProvider = ({ children }) => {
     try {
       const response = await api.post(`/technologies`, data);
 
-      console.log(response.data);
       toast.success("Technology registered successfuly", { autoClose: 2000 });
     } catch (error) {
       console.log(error);
@@ -28,21 +26,11 @@ export const TechProvider = ({ children }) => {
       const response = await api.get(`/technologies`);
 
       setTechData(response.data);
-      console.log(techData);
     } catch (error) {
       console.log(error);
     }
   }; 
 
-  const techById = async (id) => {
-    try {
-      const response = await api.get(`/technologies/${id}`);
-
-      setTechDataById(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const techUpdate = async (data, id) => {
     try {
@@ -84,7 +72,6 @@ export const TechProvider = ({ children }) => {
         setTechData,
         techCreate,
         techList,
-        techById,
         techCreateModal,
         setTechCreateModal,
         techUpdateModal,

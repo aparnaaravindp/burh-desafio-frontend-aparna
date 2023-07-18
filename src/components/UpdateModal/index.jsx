@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import { TechContext } from "../../providers/TechContext";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-
+import "../UpdateModal/index.css";
 
 const schema = yup
   .object({
@@ -29,12 +28,12 @@ export function UpdateModal() {
   });
 
   const submit = async (data) => {
-    await techUpdate(data, editingStatus.id);
+    await techUpdate(data, editingStatus._id);
     setEditingStatus(null);
   };
 
   return (
-    <div className = "updateModalContainer">
+    <div className="updateModalContainer">
       <form onSubmit={handleSubmit(submit)}>
         <div className="techInfo">
           <h2 className="techInfoTitle">Technology Details</h2>
@@ -64,7 +63,7 @@ export function UpdateModal() {
               className="deleteBttn"
               type="button"
               onClick={async () => {
-                await techDelete(editingStatus.id);
+                await techDelete(editingStatus._id);
                 setEditingStatus(null);
               }}
             >
@@ -73,6 +72,6 @@ export function UpdateModal() {
           </div>
         </div>
       </form>
-      </div>
+    </div>
   );
 }
