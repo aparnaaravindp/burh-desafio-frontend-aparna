@@ -1,0 +1,33 @@
+.technologyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 60px;
+  margin: 0 auto;
+}
+
+.technologyContainer > h2 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  margin-top: 40px;
+}
+
+.createButton {
+  width: 32.49px;
+  height: 32px;
+  background-color: lightgray;
+  border-radius: 8px;
+  border: none;
+  color: #6495ed;
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+@media (min-width: 900px) {
+  .createButton {
+    cursor: pointer;
+  }
+}

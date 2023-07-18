@@ -1,0 +1,138 @@
+.modalContainer {
+  width: 91%;
+  height: 290px;
+  background-color: lightgray;
+  box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
+  border-radius: 3.20867px;
+  position: absolute;
+  top: 55%;
+  left: 41%;
+  transform: translate(-40%, -50%);
+}
+
+.techRegister {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: grey;
+  height: 40.11px;
+  width: 93.4%;
+  padding: 10px;
+}
+
+.techRegister > .formTitle {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 11.2304px;
+  color: black;
+}
+
+.techRegister > .closeButton {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 12.8347px;
+  color: grey;
+  background-color: lightgray;
+  border: none;
+}
+
+.inputData {
+  padding: 10px;
+}
+
+.titleInput > label {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  margin-left: 0px;
+}
+.titleInput > input {
+  width: 95%;
+  height: 34px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 13.0293px;
+  background-color: lightgray;
+  color: black;
+  border: 0.9772px solid black;
+  border-radius: 3.20867px;
+  padding: 3px;
+  margin-top: 10px;
+}
+.titleInput > p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 9.73988px;
+  color: red;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.statusSelect > label {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 10px;
+  color: black;
+}
+.statusSelect > select {
+  width: 100%;
+  height: 38.5px;
+  background-color: lightgray;
+  color: black;
+  border: 0.9772px solid black;
+  border-radius: 3.20867px;
+  margin-top: 10px;
+}
+
+select > option {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 9.772px;
+}
+
+.techRegButton {
+  width: 100%;
+  height: 38.5px;
+  background-color: #6495ed;
+  border: 1.2182px solid #6495ed;
+  border-radius: 8px;
+  color: black;
+  margin-top: 15px;
+}
+
+@media (min-width: 400px) {
+  .modalContainer {
+    width: 65%;
+    top: 64%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  }
+}
+
+@media (min-width: 700px) {
+  .modalContainer {
+    width: 36%;
+    top: 64%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+  }
+}
+
+@media (min-width: 900px) {
+  .modalContainer {
+    width: 22%;
+    top: 55%;
+    left: 48%;
+    transform: translate(-40%, -50%);
+  }
+
+  form {
+    .closeButton {
+      cursor: pointer;
+    }
+  }
+  .techRegButton {
+    cursor: pointer;
+  }
+}
