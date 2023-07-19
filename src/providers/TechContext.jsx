@@ -29,8 +29,7 @@ export const TechProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
-  }; 
-
+  };
 
   const techUpdate = async (data, id) => {
     try {
@@ -40,7 +39,6 @@ export const TechProvider = ({ children }) => {
 
       const newTechData = techData.map((tech) => {
         if (id === tech._id) {
-          console.log(tech._id);
           return { ...tech, ...data };
         } else {
           return tech;

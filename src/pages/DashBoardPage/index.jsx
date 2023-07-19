@@ -7,7 +7,7 @@ import "../DashBoardPage/index.css";
 import { useContext, useEffect, useState } from "react";
 
 export function DashBoardPage({ setStart }) {
-  const [ techData, setTechData] = useState([])
+  const [techData, setTechData] = useState([]);
   const {
     techCreateModal,
     setTechCreateModal,
@@ -15,23 +15,19 @@ export function DashBoardPage({ setStart }) {
     setEditingStatus,
   } = useContext(TechContext);
 
-  
-  
   const techList = async () => {
     try {
       const response = await api.get(`/technologies`);
 
       setTechData(response.data);
-      console.log(techData);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(()=>{
-  techList()
-  }, [])
-  
+  useEffect(() => {
+    techList();
+  }, []);
 
   return (
     <>

@@ -20,10 +20,9 @@
   font-weight: 800;
 }
 
-.title > img{
-  width:70%;
+.title > img {
+  width: 70%;
 }
-
 
 .information > p {
   font-family: "Nunito";
@@ -33,23 +32,22 @@
   color: #000000;
 }
 
-
 .information > button {
   width: 93%;
   height: 48px;
-  background-color: #6495ED ;
+  background-color: #6495ed;
   color: #ffffff;
   font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
-  border: 2px solid #6495ED;
+  border: 2px solid #6495ed;
   border-radius: 8px;
   margin-top: 30px;
 }
 
 .image > img {
   margin-top: 20px;
-  width:100%;
+  width: 100%;
 }
 
 @media (min-width: 900px) {
